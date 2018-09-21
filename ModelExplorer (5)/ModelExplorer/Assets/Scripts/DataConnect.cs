@@ -68,13 +68,13 @@ public class DataConnect : MonoBehaviour
             var CarClass = (GameObject)Instantiate(carPrefab, new Vector3(x, y, z), Quaternion.identity);
             CarClass.transform.Rotate(0, 180, 0);
 
-            var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(x, y, z), Quaternion.identity);
+            var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(x+1, y, z), Quaternion.identity);
             WheelClass.transform.Rotate(0, 180, 0);
 
-            var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(x, y, z), Quaternion.identity);
+            var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(x+2, y, z), Quaternion.identity);
             SeatClass.transform.Rotate(0, 180, 0);
 
-            var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(x, y, z), Quaternion.identity);
+            var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(x+3, y, z), Quaternion.identity);
             SuspensionClass.transform.Rotate(0, 180, 0);
 
             //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
