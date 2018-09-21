@@ -7,9 +7,9 @@ using UnityEngine.Networking;
 public class DataConnect : MonoBehaviour
 {
     public GameObject myPrefab;
-    //string WebsiteURL = "https://dwhi045.azurewebsites.net/tables/Boat?zumo-api-version=2.0.0";
+    //string WebsiteURL = "https://dwhi045.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
 
-    string WebsiteURL = "https://dwhi045.azurewebsites.net/tables/Boat?zumo-api-version=2.0.0";
+    string WebsiteURL = "https://tmul918.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
 
     string jsonResponse;
 
@@ -32,8 +32,8 @@ public class DataConnect : MonoBehaviour
         }
 
         //We can now deserialize into an array of objects - in this case the class we created. The deserializer is smart enough to instantiate all the classes and populate the variables based on column name.
-        //Boat[] Boats = JsonReader.Deserialize<Boat[]>(jsonResponse);
-        Boat[] Boats = JsonConvert.DeserializeObject<Boat[]>(jsonResponse);
+        //Car[] Cars = JsonReader.Deserialize<Car[]>(jsonResponse);
+        Car[] Cars = JsonConvert.DeserializeObject<Car[]>(jsonResponse);
 
 
         //----------------------
@@ -45,10 +45,10 @@ public class DataConnect : MonoBehaviour
         //----------------------
 
         //We can now loop through the array of objects and access each object individually
-        foreach (Boat Boat in Boats)
+        foreach (Car Car in Cars)
         {
             //Example of how to use the object
-            Debug.Log("This Boats name is: " + Boat.BoatName);
+            Debug.Log("This component is: " + Car.ClassName);
             //----------------------
             //YOUR CODE TO INSTANTIATE NEW PREFABS GOES HERE
             //float perc = i / (float)totalObjects;
@@ -57,15 +57,15 @@ public class DataConnect : MonoBehaviour
             //float x = 1 + i * .5f;
             //float y = 0.6f;
             //float z = 2.0f;
-            float x = Boat.X;
-            float y = Boat.Y;
-            float z = Boat.Z;
+            float x = Car.X;
+            float y = Car.Y;
+            float z = Car.Z;
 
             var newObject = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
             newObject.transform.Rotate(0, 180, 0);
             //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
             //newObject.GetComponent<CubeScript>().rotateSpeed = .2f + perc * 4.0f;
-            newObject.transform.Find("New Text").GetComponent<TextMesh>().text = Boat.BoatName;//"Hullo Again";
+            newObject.transform.Find("New Text").GetComponent<TextMesh>().text = Car.ClassName;//"Hullo Again";
             i++;
 
             //----------------------
