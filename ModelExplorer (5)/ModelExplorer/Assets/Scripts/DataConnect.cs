@@ -9,7 +9,7 @@ public class DataConnect : MonoBehaviour
     public GameObject myPrefab;
     //string WebsiteURL = "https://dwhi045.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
 
-    string WebsiteURL = "https://tmul918.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
+    string WebsiteURL = "https://tmul918.azurewebsites.net/tables/Car";
 
     string jsonResponse;
 
