@@ -6,10 +6,14 @@ using UnityEngine.Networking;
 
 public class DataConnect : MonoBehaviour
 {
-    public GameObject myPrefab;
+    public GameObject wheelPrefab;
+    public GameObject carPrefab;
+    public GameObject seatPrefab;
+    public GameObject suspensionPrefab;
+
     //string WebsiteURL = "https://dwhi045.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
 
-    string WebsiteURL = "https://tmul918.azurewebsites.net/tables/Car";
+    string WebsiteURL = "https://tmul918.azurewebsites.net/tables/Car?zumo-api-version=2.0.0";
 
     string jsonResponse;
 
@@ -61,11 +65,21 @@ public class DataConnect : MonoBehaviour
             float y = Car.Y;
             float z = Car.Z;
 
-            var newObject = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
-            newObject.transform.Rotate(0, 180, 0);
+            var CarClass = (GameObject)Instantiate(carPrefab, new Vector3(x, y, z), Quaternion.identity);
+            CarClass.transform.Rotate(0, 180, 0);
+
+            var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(x, y, z), Quaternion.identity);
+            WheelClass.transform.Rotate(0, 180, 0);
+
+            var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(x, y, z), Quaternion.identity);
+            SeatClass.transform.Rotate(0, 180, 0);
+
+            var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(x, y, z), Quaternion.identity);
+            SuspensionClass.transform.Rotate(0, 180, 0);
+
             //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
             //newObject.GetComponent<CubeScript>().rotateSpeed = .2f + perc * 4.0f;
-            newObject.transform.Find("New Text").GetComponent<TextMesh>().text = Car.ClassName;//"Hullo Again";
+            CarClass.transform.Find("New Text").GetComponent<TextMesh>().text = Car.ClassName;//"Hullo Again";
             i++;
 
             //----------------------
