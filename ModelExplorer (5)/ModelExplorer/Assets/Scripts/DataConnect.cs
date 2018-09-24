@@ -43,16 +43,13 @@ public class DataConnect : MonoBehaviour
         //----------------------
         //YOU WILL NEED TO DECLARE SOME VARIABLES HERE SIMILAR TO THE CREATIVE CODING TUTORIAL
 
-        int i = 0;
         //int totalObjects = 30;
         //float totalDistance = 2.9f;
         //----------------------
 
         //We can now loop through the array of objects and access each object individually
-        foreach (Car Car in Cars)
-        {
+            
             //Example of how to use the object
-            Debug.Log("This Cars name is: " + Car.ClassName);
             //----------------------
             //YOUR CODE TO INSTANTIATE NEW PREFABS GOES HERE
             //float perc = i / (float)totalObjects;
@@ -61,29 +58,27 @@ public class DataConnect : MonoBehaviour
             //float x = 1 + i * .5f;
             //float y = 0.6f;
             //float z = 2.0f;
-            float x = Car.X;
-            float y = Car.Y;
-            float z = Car.Z;
 
-            var CarClass = (GameObject)Instantiate(carPrefab, new Vector3(x, y, z), Quaternion.identity);
-            CarClass.transform.Rotate(0, 180, 0);
+        var CarClass = (GameObject)Instantiate(carPrefab, new Vector3(Cars[0].X, Cars[0].Y, Cars[0].Z), Quaternion.identity);
+        CarClass.transform.Rotate(0, 180, 0);
+        //CarClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[0].ClassName;
 
-            var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(x+1, y, z), Quaternion.identity);
-            WheelClass.transform.Rotate(0, 180, 0);
+        var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(Cars[1].X, Cars[1].Y, Cars[1].Z), Quaternion.identity);
+        WheelClass.transform.Rotate(0, 180, 0);
+        //WheelClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[1].ClassName;
 
-            var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(x+2, y, z), Quaternion.identity);
-            SeatClass.transform.Rotate(0, 180, 0);
+        var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(Cars[2].X, Cars[2].Y, Cars[2].Z), Quaternion.identity);
+        SeatClass.transform.Rotate(0, 180, 0);
+        //SeatClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[2].ClassName;
 
-            var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(x+3, y, z), Quaternion.identity);
-            SuspensionClass.transform.Rotate(0, 180, 0);
+        var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(Cars[3].X, Cars[3].Y, Cars[3].Z), Quaternion.identity);
+        SuspensionClass.transform.Rotate(0, 180, 0);
+        //SuspensionClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[3].ClassName;
 
-            //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
-            //newObject.GetComponent<CubeScript>().rotateSpeed = .2f + perc * 4.0f;
-            CarClass.transform.Find("New Text").GetComponent<TextMesh>().text = Car.ClassName;//"Hullo Again";
-            i++;
+        //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
+        //newObject.GetComponent<CubeScript>().rotateSpeed = .2f + perc * 4.0f;
 
-            //----------------------
-        }
+        //----------------------
     }
 
     IEnumerator GetData()
