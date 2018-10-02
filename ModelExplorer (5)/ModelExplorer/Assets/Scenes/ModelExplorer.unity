@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3067894, g: 0.29413754, b: 0.24400935, a: 1}
+  m_IndirectSpecularColor: {r: 0.3067897, g: 0.2941377, b: 0.24400929, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -142,10 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f622a35b5c7e16249b4586e5f23dceef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelPrefab: {fileID: 100008, guid: fb17f6e706b291d41843a741b8e8f6a2, type: 3}
-  carPrefab: {fileID: 100000, guid: a1efaf81f35933c42afad8dbc9b070ab, type: 3}
-  seatPrefab: {fileID: 100002, guid: 81a3649546e90064b9c84d7c5dcf18d8, type: 3}
-  suspensionPrefab: {fileID: 100008, guid: 94a68ccbe8d62324c9006e32bc95d71e, type: 3}
+  wheelPrefab: {fileID: 1909259873225484, guid: fc0aa280cfc0b28498cb39a0fb2f9827,
+    type: 2}
+  carPrefab: {fileID: 1895873885644718, guid: 1cb849a8421af31418907ffc0007ca0c, type: 2}
+  seatPrefab: {fileID: 1633653649241386, guid: cb59992095f1b54418d5222f1cca13f0, type: 2}
+  suspensionPrefab: {fileID: 1070085964746824, guid: 25f2448af8080164b934ddea2961d4a5,
+    type: 2}
 --- !u!4 &431596255
 Transform:
   m_ObjectHideFlags: 0

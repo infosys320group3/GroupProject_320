@@ -61,19 +61,19 @@ public class DataConnect : MonoBehaviour
 
         var CarClass = (GameObject)Instantiate(carPrefab, new Vector3(Cars[0].X, Cars[0].Y, Cars[0].Z), Quaternion.identity);
         CarClass.transform.Rotate(0, 180, 0);
-        //CarClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[0].ClassName;
+        CarClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[0].ClassName;
 
         var WheelClass = (GameObject)Instantiate(wheelPrefab, new Vector3(Cars[1].X, Cars[1].Y, Cars[1].Z), Quaternion.identity);
         WheelClass.transform.Rotate(0, 180, 0);
-        //WheelClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[1].ClassName;
+        WheelClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[1].ClassName;
 
         var SeatClass = (GameObject)Instantiate(seatPrefab, new Vector3(Cars[2].X, Cars[2].Y, Cars[2].Z), Quaternion.identity);
         SeatClass.transform.Rotate(0, 180, 0);
-        //SeatClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[2].ClassName;
+        SeatClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[2].ClassName;
 
         var SuspensionClass = (GameObject)Instantiate(suspensionPrefab, new Vector3(Cars[3].X, Cars[3].Y, Cars[3].Z), Quaternion.identity);
         SuspensionClass.transform.Rotate(0, 180, 0);
-        //SuspensionClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[3].ClassName;
+        SuspensionClass.transform.Find("New Text").GetComponent<TextMesh>().text = Cars[3].ClassName;
 
         //newObject.GetComponent<CubeScript>().SetSize(.45f * (1.0f - perc));
         //newObject.GetComponent<CubeScript>().rotateSpeed = .2f + perc * 4.0f;
